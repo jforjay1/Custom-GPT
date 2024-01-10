@@ -12,7 +12,7 @@ const OPENAI_API_KEY = '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'; //
 // Endpoint to create a Thread and add a message
 app.post('/sendMessage', async (req, res) => {
     const userPrompt = req.body.message;
-    console.log('Received prompt from user:', userPrompt);
+    //console.log('Received prompt from user:', userPrompt);
     const assistantId = 'asst_fn1mScWvslVRhZ92YGibKtCW';
 
   try {
@@ -30,7 +30,7 @@ app.post('/sendMessage', async (req, res) => {
     );
 
     const threadId = threadResponse.data.id;
-    console.log(threadId);
+    //console.log(threadId);
 
     // Add a message to the Thread
     await axios.post(
@@ -47,7 +47,7 @@ app.post('/sendMessage', async (req, res) => {
         }
       }
     );
-    console.log("Message added and starting to run the thread");
+    //console.log("Message added and starting to run the thread");
 
     // Run the Assistant
     const runResponse = await axios.post(
@@ -64,7 +64,7 @@ app.post('/sendMessage', async (req, res) => {
       }
     );
 
-    console.log("Execution completed, strting to fetch the response");
+    //console.log("Execution completed, strting to fetch the response");
 
     const checkInterval = setInterval(async () => {
       try {
@@ -82,7 +82,7 @@ app.post('/sendMessage', async (req, res) => {
         console.log(runStatus.data.data[0].status);
     
         if (runStatus.data.data[0].status === 'completed') {
-          console.log("COMPLETED EXECUTION STARTING TO FETCH THE RESPONSES");
+          //console.log("COMPLETED EXECUTION STARTING TO FETCH THE RESPONSES");
           clearInterval(checkInterval);
     
           // Fetch messages once the run is completed
