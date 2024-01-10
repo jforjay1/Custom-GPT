@@ -7,13 +7,13 @@ app.use(cors());
 app.use(express.json());
 
 const OPENAI_API_URL = 'https://api.openai.com/v1'; // Update to Assistants API endpoint
-const OPENAI_API_KEY = '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'; // Use environment variable for API key
+const OPENAI_API_KEY = ''; // Your OpenAI API key
 
 // Endpoint to create a Thread and add a message
 app.post('/sendMessage', async (req, res) => {
     const userPrompt = req.body.message;
     //console.log('Received prompt from user:', userPrompt);
-    const assistantId = 'asst_fn1mScWvslVRhZ92YGibKtCW';
+    const assistantId = ''; //Your assistant ID
 
   try {
     // Create a new Thread
