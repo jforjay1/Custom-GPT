@@ -18,6 +18,9 @@ Independent Prompt Handling: Each user prompt initiates a new thread, ensuring f
 
 Ensure you have npm and Node.js installed on your system.
 
+You will need to get OpenAI API key from https://platform.openai.com/api-keys to authenticate.
+I have removed my assistant ID for security purposes so, you will need to create your custom assistant setup from https://platform.openai.com/assistants.
+
 #### Installation📦
 
 Clone the repository to your local machine
@@ -26,8 +29,13 @@ Clone the repository to your local machine
 git clone https://github.com/jforjay1/Custom-GPT.git
 ```
 
+### Setup🦾
+
+Add your API key and custom model assistant ID to `Custom-GPT/gpt-backend/index.js` file.
+
 Open two terminals in Custom-GPT directory to deploy the application.
 
+### Run⚙️
 In the 1st Terminal:
 
 ```bash
